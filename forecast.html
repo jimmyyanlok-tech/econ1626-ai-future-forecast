@@ -19,14 +19,22 @@
       background: linear-gradient(135deg, #0f172a, #2563eb);
       color: white;
       padding: 80px 12%;
-      text-align: left;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 24px;
     }
 
     header h1 {
-      font-size: 48px;
+      font-size: 50px;
       line-height: 1.15;
-      margin-bottom: 20px;
-      max-width: 900px;
+      max-width: 950px;
+      margin: 0 0 20px;
     }
 
     header p {
@@ -35,19 +43,10 @@
       color: #dbeafe;
     }
 
-    .tag {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
     nav {
       background: white;
       padding: 16px 12%;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -58,13 +57,14 @@
       color: #2563eb;
       text-decoration: none;
       font-weight: bold;
+      font-size: 15px;
     }
 
     section {
-      max-width: 950px;
+      max-width: 980px;
       margin: 50px auto;
       background: white;
-      padding: 40px;
+      padding: 42px;
       border-radius: 18px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     }
@@ -75,17 +75,113 @@
       margin-top: 0;
     }
 
+    h3 {
+      color: #1e3a8a;
+      margin-top: 28px;
+    }
+
     .highlight {
       background: #eff6ff;
       border-left: 5px solid #2563eb;
       padding: 20px;
       border-radius: 10px;
+      margin: 22px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      padding: 22px;
+      border-radius: 14px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .bar-box {
+      margin-top: 24px;
+    }
+
+    .bar-row {
+      margin: 16px 0;
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .bar-bg {
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+      height: 16px;
+    }
+
+    .bar {
+      background: #2563eb;
+      height: 16px;
+      border-radius: 999px;
+    }
+
+    .scenario-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+    }
+
+    .scenario-table th,
+    .scenario-table td {
+      border: 1px solid #e5e7eb;
+      padding: 14px;
+      text-align: left;
+    }
+
+    .scenario-table th {
+      background: #eff6ff;
+      color: #1e3a8a;
+    }
+
+    .button-group {
+      margin-top: 20px;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #policy-result {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 20px;
       margin-top: 20px;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
       color: #6b7280;
     }
   </style>
@@ -98,7 +194,7 @@
     <div class="tag">ECON1626 AI Future Forecast | Interactive Web Essay</div>
     <h1>How AI Will Reshape Australia’s Labour Market by 2030</h1>
     <p>
-      This interactive forecast explores how artificial intelligence may change
+      This interactive web essay forecasts how artificial intelligence may change
       productivity, jobs, skills, wages and inequality in Australia by 2030.
     </p>
   </header>
@@ -106,66 +202,258 @@
   <nav>
     <a href="#thesis">Thesis</a>
     <a href="#channels">Economic Channels</a>
+    <a href="#context">Context</a>
     <a href="#scenarios">Scenarios</a>
     <a href="#policy">Policy</a>
     <a href="#methods">Methods</a>
   </nav>
 
   <section id="thesis">
-    <h2>Thesis</h2>
-    <p>
-      By 2030, artificial intelligence will reshape Australia’s labour market
-      less by destroying entire occupations and more by reorganising the tasks
-      inside existing jobs.
-    </p>
+    <h2>1. Thesis</h2>
 
 ```
+<p>
+  By 2030, artificial intelligence will reshape Australia’s labour market
+  less by destroying entire occupations and more by reorganising the tasks
+  inside existing jobs.
+</p>
+
 <div class="highlight">
   <strong>Core argument:</strong> AI will create uneven productivity gains.
   Workers and firms that can combine human judgement with AI tools will
   benefit first, while routine white-collar workers, small businesses and
   workers with limited digital skills may face transition pressure.
 </div>
+
+<p>
+  The key question is not simply whether AI will replace workers. A better
+  economic question is: which tasks will AI change, who will capture the
+  productivity gains, and what policies will help workers move into
+  higher-value work?
+</p>
 ```
 
   </section>
 
   <section id="channels">
-    <h2>AI Capabilities → Economic Channels</h2>
-    <p>
-      AI affects the labour market through several economic channels:
-      task automation, productivity growth, changing skill demand, wage
-      inequality and shifts in firm competitiveness.
-    </p>
+    <h2>2. AI Capabilities → Economic Channels</h2>
+
+```
+<p>
+  AI affects the labour market through several economic channels. Generative
+  AI can write, summarise, code, analyse data and support customer service.
+  These capabilities do not automatically remove jobs, but they can automate
+  or accelerate specific tasks.
+</p>
+
+<div class="grid">
+  <div class="card">
+    <h3>Productivity</h3>
+    <p>AI can help workers complete cognitive and administrative tasks faster.</p>
+  </div>
+
+  <div class="card">
+    <h3>Tasks</h3>
+    <p>Routine writing, data processing and reporting tasks are more exposed to automation.</p>
+  </div>
+
+  <div class="card">
+    <h3>Skills</h3>
+    <p>Workers with AI literacy, judgement and problem-solving skills may gain an advantage.</p>
+  </div>
+
+  <div class="card">
+    <h3>Inequality</h3>
+    <p>If access to AI tools is uneven, wage and firm-level inequality may increase.</p>
+  </div>
+</div>
+
+<h3>Interactive indicator: AI exposure by occupation group</h3>
+<p>
+  The chart below is a scenario-based exposure index. It shows which types
+  of work may be more exposed to AI-driven task change.
+</p>
+
+<div class="bar-box">
+  <div class="bar-row">
+    <div class="bar-label"><span>Administrative workers</span><span>85%</span></div>
+    <div class="bar-bg"><div class="bar" style="width:85%"></div></div>
+  </div>
+
+  <div class="bar-row">
+    <div class="bar-label"><span>Finance and insurance</span><span>78%</span></div>
+    <div class="bar-bg"><div class="bar" style="width:78%"></div></div>
+  </div>
+
+  <div class="bar-row">
+    <div class="bar-label"><span>Professional services</span><span>72%</span></div>
+    <div class="bar-bg"><div class="bar" style="width:72%"></div></div>
+  </div>
+
+  <div class="bar-row">
+    <div class="bar-label"><span>Marketing and media</span><span>68%</span></div>
+    <div class="bar-bg"><div class="bar" style="width:68%"></div></div>
+  </div>
+
+  <div class="bar-row">
+    <div class="bar-label"><span>Healthcare</span><span>38%</span></div>
+    <div class="bar-bg"><div class="bar" style="width:38%"></div></div>
+  </div>
+
+  <div class="bar-row">
+    <div class="bar-label"><span>Construction</span><span>25%</span></div>
+    <div class="bar-bg"><div class="bar" style="width:25%"></div></div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <section id="context">
+    <h2>3. Australia’s Labour Market Context</h2>
+
+```
+<p>
+  Australia enters the AI transition with a service-based labour market.
+  Many jobs involve communication, administration, professional judgement,
+  customer service, education, finance and digital information work.
+</p>
+
+<p>
+  This matters because generative AI is strongest in tasks involving text,
+  data, information processing and repeated decision support. Therefore,
+  the first wave of AI labour market change is likely to be felt strongly
+  in office-based and professional service occupations.
+</p>
+```
+
   </section>
 
   <section id="scenarios">
-    <h2>Three Scenarios to 2030</h2>
-    <p>
-      This forecast compares three possible futures: a baseline scenario,
-      an upside scenario and a downside scenario.
-    </p>
+    <h2>4. Three Scenarios to 2030</h2>
+
+```
+<table class="scenario-table">
+  <tr>
+    <th>Scenario</th>
+    <th>Description</th>
+    <th>Likely Outcome</th>
+  </tr>
+
+  <tr>
+    <td><strong>Baseline</strong></td>
+    <td>AI adoption grows steadily but unevenly across firms and occupations.</td>
+    <td>Moderate productivity gains, but rising pressure on routine white-collar work.</td>
+  </tr>
+
+  <tr>
+    <td><strong>Upside</strong></td>
+    <td>Government, firms and education providers invest in AI literacy and reskilling.</td>
+    <td>Higher productivity, smoother job transition and more inclusive wage growth.</td>
+  </tr>
+
+  <tr>
+    <td><strong>Downside</strong></td>
+    <td>AI is used mainly as a cost-cutting tool, with weak worker support and weak governance.</td>
+    <td>Higher inequality, weaker job security and stronger labour market polarisation.</td>
+  </tr>
+</table>
+```
+
   </section>
 
   <section id="policy">
-    <h2>Policy Playbook</h2>
-    <p>
-      Australia’s policy response will shape whether AI becomes a broad
-      productivity tool or a source of deeper inequality.
-    </p>
+    <h2>5. Policy Playbook</h2>
+
+```
+<p>
+  Australia’s policy response will shape whether AI becomes a broad
+  productivity tool or a source of deeper inequality. The most important
+  policy challenge is not to stop AI adoption, but to guide it toward
+  inclusive productivity growth.
+</p>
+
+<div class="grid">
+  <div class="card">
+    <h3>AI Reskilling</h3>
+    <p>Expand practical AI literacy, digital training and vocational pathways.</p>
+  </div>
+
+  <div class="card">
+    <h3>SME Support</h3>
+    <p>Help small and medium-sized firms adopt AI tools safely and productively.</p>
+  </div>
+
+  <div class="card">
+    <h3>Responsible AI</h3>
+    <p>Set clear rules for AI use in hiring, monitoring, evaluation and decision-making.</p>
+  </div>
+</div>
+
+<h3>Interactive policy choice</h3>
+<p>Click one option to see how policy strength may affect the forecast.</p>
+
+<div class="button-group">
+  <button onclick="showPolicy('weak')">Weak policy</button>
+  <button onclick="showPolicy('moderate')">Moderate policy</button>
+  <button onclick="showPolicy('strong')">Strong policy</button>
+</div>
+
+<div id="policy-result">
+  Select a policy setting above to view the likely labour market outcome.
+</div>
+```
+
   </section>
 
   <section id="methods">
-    <h2>Methods, Data and Limitations</h2>
-    <p>
-      This project uses scenario-based forecasting, labour market evidence,
-      economic theory and AI-assisted web design to explore possible outcomes.
-    </p>
+    <h2>6. Methods, Data and Limitations</h2>
+
+```
+<p>
+  This project uses scenario-based forecasting. It does not claim to predict
+  the future with certainty. Instead, it compares possible pathways based on
+  AI capabilities, labour market mechanisms, policy choices and uncertainty.
+</p>
+
+<p>
+  The forecast uses economic reasoning about productivity, task automation,
+  skill-biased technological change and inequality. The exposure indicators
+  are illustrative and designed to support the argument rather than act as
+  precise statistical predictions.
+</p>
+
+<h3>AI acknowledgement</h3>
+<p>
+  Generative AI tools were used to support brainstorming, structure
+  development, coding assistance and language refinement. Final editing,
+  source selection and economic interpretation were reviewed by the author.
+</p>
+```
+
   </section>
 
   <footer>
     <p>Created for ECON1626 Assessment 3: AI Future Forecast</p>
   </footer>
+
+  <script>
+    function showPolicy(type) {
+      const result = document.getElementById("policy-result");
+
+      if (type === "weak") {
+        result.innerHTML = "<strong>Weak policy:</strong> AI adoption is driven mainly by cost-cutting. Productivity gains are uneven, routine workers face more pressure, and inequality risk increases.";
+      }
+
+      if (type === "moderate") {
+        result.innerHTML = "<strong>Moderate policy:</strong> AI adoption improves productivity in some sectors, but benefits remain uneven because reskilling and SME support are only partial.";
+      }
+
+      if (type === "strong") {
+        result.innerHTML = "<strong>Strong policy:</strong> AI becomes a broader productivity tool. Workers receive better training, SMEs gain access to AI support, and inequality risks are reduced.";
+      }
+    }
+  </script>
 
 </body>
 </html>
